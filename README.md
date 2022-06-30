@@ -1,75 +1,40 @@
-# Marp CLI example
+# Exemple pour les supports de cours avec Marp
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/yhatt/marp-cli-example)
+**Des supports versionnés, distribuables et hébergés par GitHub.**
 
-**The good starter example for using [Marp] via [Marp CLI].**
-
-- Write your slide deck by [Marp] Markdown.
-- Manage the content of slides via Git. (Using [GitPitch](https://github.com/gitpitch/gitpitch) style `PITCHME.md`)
-- Host your deck at GitHub, and publish as webpage with [GitHub Pages], [Netlify], and [Vercel].
-- Blazingly fast delivery out of the box. [Acquired all 100% Lighthouse scores!](#lighthouse)
+- Rédaction du contenu en Markdown [Marp].
+- Versionnage assuré par Git.
+- Hébergement via déploiement automatique dans les [gitHub pages].
 
 [marp]: https://marp.app/
-[marp cli]: https://github.com/marp-team/marp-cli
 [github pages]: https://pages.github.com/
-[netlify]: https://www.netlify.com/
-[vercel]: https://vercel.com/
+
+## Voir le support publié
 
 <p align="center">
-  <a href="https://yhatt.github.io/marp-cli-example"><img src="https://yhatt.github.io/marp-cli-example/og-image.jpg" width="500" /></a>
+  <a href="https://synryu.github.io/ensisa-multitier"><img src="https://synryu.github.io/ensisa-multitier/og-image.jpg" width="500" /></a>
 </p>
 
-## See published slide deck
 
-- <img src="https://icongr.am/octicons/mark-github.svg" width="24" height="24" valign="bottom" /> **[GitHub Pages]**: https://yhatt.github.io/marp-cli-example
-- <img src="https://icongr.am/simple/netlify.svg?colored" width="24" height="24" valign="bottom" /> **[Netlify]**: https://yhatt-marp-cli-example.netlify.app/
-- <img src="https://icongr.am/simple/zeit.svg" width="24" height="24" valign="bottom" /> **[Vercel]**: https://marp-cli-example.yhatt.vercel.app/
-
-### Lighthouse
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/3993388/115988866-7cd7fe00-a5f6-11eb-9e51-7a62da998eca.png" width="615" alt="Acquired all 100% Lighthouse scores" />
-</p>
+- <img src="https://icongr.am/octicons/mark-github.svg" width="24" height="24" valign="bottom" /> **[GitHub Pages]**: https://synryu.github.io/ensisa-multitier
 
 ## Usage
 
-It's surprisingly easy to start publishing your slide deck!
+Le déploiement des pages est déclenché via un merge sur **master**.
 
 ### <img src="https://icongr.am/octicons/mark-github.svg" width="24" height="24" valign="bottom" /> [GitHub Pages]
 
-Create a new _public_ repository based on this repository, from **"Use this template"** button!
+## Comment ajouter du contenu
 
-[![](https://img.shields.io/badge/-Use%20this%20template-brightgreen?style=for-the-badge&logo=github)](https://github.com/yhatt/marp-cli-example/generate)
+La documentation officielle de [Marpit Markdown](https://marpit.marp.app/markdown) est le point départ.
 
-We already have [GitHub Actions workflow](.github/workflows/github-pages.yml) to build and deploy from `master` to `gh-pages` automatically. All you have got to [turn on GitHub Pages with `gh-pages` branch](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) from **"Settings"** tab.
+L'installation des dépendances n'est utile que pour générer le html en local.
 
-### <img src="https://icongr.am/simple/netlify.svg?colored" width="24" height="24" valign="bottom" /> [Netlify]
+Sinon, modifier les fichiers md contenu dans les **[`Sources`](./Sources)**!
 
-Push **"Deploy to netlify"** button. [Netlify] will create your repository based on this example and host website from `master` branch automatically.
+### Aperçu
 
-[![Deploy to Netlify](./assets/netlify-deploy-button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yhatt/marp-cli-example)
-
-### <img src="https://icongr.am/simple/zeit.svg" width="24" height="24" valign="bottom" /> [Vercel]
-
-Push **"Deploy"** button. [Vercel] can choose to create your repository based on this example.
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/yhatt/marp-cli-example)
-
-> :information_source: To enable the auto-generated open graph image in Vercel, you have to turn on ["Automatically expose System Environment Variables"](https://vercel.com/docs/concepts/projects/environment-variables#system-environment-variables) in your Vercel project dashboard.
-
-## How to write
-
-For Marp slide deck features, please see the documentation of [Marpit Markdown](https://marpit.marp.app/markdown), [the features of Marp Core](https://github.com/marp-team/marp-core#features), and the default example in [`PITCHME.md`](https://raw.githubusercontent.com/yhatt/marp-cli-example/master/PITCHME.md) for .
-
-You have to install [Node.js](https://nodejs.org/) and run `npm i` at first if you want to write slide deck with [Marp CLI].
-
-### Edit deck
-
-Just edit **[`PITCHME.md`](./PITCHME.md)**!
-
-#### Preview deck
-
-**[Marp for VS Code]** extension is the best partner for writing Marp slide deck with live preview.
+L'extension **[Marp for VS Code]** est tout ce qu'il pour avoir un aperçu dynamique directement dans VS Code..
 
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode">
@@ -77,36 +42,24 @@ Just edit **[`PITCHME.md`](./PITCHME.md)**!
   </a>
 </p>
 
-**You can try edit and preview on the web now!** Open https://github.dev/yhatt/marp-cli-example/blob/master/PITCHME.md or hit <kbd>.</kbd> key on this repository, and install [Marp for VS Code] extension.
+### Assets et thèmes
 
-[marp for vs code]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
+- le dossier `assets` contient les éléments externes utilisés dans les slides. (comme les images par exemple)
+- le dossier `thèmes` contient les [thèmes CSS personnalisés](https://marpit.marp.app/theme-css). Pour appliquer un thème, modifier la directive globale `theme`.
 
-#### Preview via CLI
-
-```bash
-npm run start
-```
-
-It will be opened preview window via installed Google Chrome, and track change of `PITCHME.md`.
-
-### Assets and themes
-
-- `assets` directory can put your assets for using in the deck. (e.g. Image resources)
-- `themes` directory can put [custom theme CSS](https://marpit.marp.app/theme-css). To use in the deck, please change `theme` global directive.
-
-### Build deck via CLI
+### Build local via CLI
 
 ```bash
 npm run build
 ```
 
-The built assets will output to `public` folder.
+Les fichiers générés iront dans le dossier `public`.
 
-#### Build per assets
+#### Build partiel
 
 ```bash
-npm run deck      # Output static HTML to public/index.html
-npm run og-image  # Output image for Open Graph to public/og-image.jpg
+npm run deck      # Génère l'HTML statique dans public/index.html
+npm run og-image  # Génère l'image pour Open Graph dans public/og-image.jpg
 ```
 
 ## LICENSE
